@@ -52,6 +52,7 @@ namespace WuerfelspielTests
             Assert.IsNotNull(w.Ergebnis);
         }
 
+        //TODO: wie kann hier verhindert werden, dass der Random nur zufällig im Testbereich liegt?
         [TestMethod]
         public void ZufallMussAufDemWuerfelSein()
         {

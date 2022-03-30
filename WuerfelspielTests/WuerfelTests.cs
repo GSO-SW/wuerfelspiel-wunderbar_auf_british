@@ -37,12 +37,33 @@ namespace WuerfelspielTests
             Wuerfel w = new Wuerfel(-1);
 
             //act
-          
-
         }
 
-       
+        [TestMethod]
+        public void ZufallsZahlErstellet()
+        {
+            //arrage
+            Wuerfel w = new Wuerfel(6);
 
+            //act
+            w.Wuerfeln();
+            
+            //Assert
+            Assert.IsNotNull(w.Ergebnis);
+        }
+
+        [TestMethod]
+        public void ZufallMussAufDemWuerfelSein()
+        {
+            //arrage
+            Wuerfel w = new Wuerfel(6);
+
+            //act
+            w.Wuerfeln();
+
+            //Assert
+            Assert.IsTrue(w.Ergebnis > 0 && w.Ergebnis < 7);
+        }
 
     }
 }

@@ -7,10 +7,27 @@ namespace WuerfelspielTests
     [TestClass]
     public class WuerfelTests
     {
-       
+        [TestMethod]
+        public void WurfelBauen()
+        {
+            //arrage
+            Wuerfel w = new Wuerfel(6);
 
+            //act
+            Assert.IsNotNull(w);
 
+        }
 
+        [TestMethod]
+        public void SeitenSpeichern()
+        {
+            //arrage
+            Wuerfel w = new Wuerfel(6);
+
+            //act
+            Assert.IsTrue(w.AnzahlSeiten == 6);
+
+        }
 
 
     }

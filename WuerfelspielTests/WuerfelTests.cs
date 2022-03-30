@@ -29,6 +29,17 @@ namespace WuerfelspielTests
 
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void MehrAlsEineSeite()
+        {
+            //arrage
+            Wuerfel w = new Wuerfel(-1);
+
+            //act
+          
+
+        }
 
     }
 }

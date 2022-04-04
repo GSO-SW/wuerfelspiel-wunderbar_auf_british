@@ -66,5 +66,19 @@ namespace WuerfelspielTests
             Assert.IsTrue(w.Ergebnis > 0 && w.Ergebnis < 7);
         }
 
+        [TestMethod]
+        public void Wuerfel_StandartKonstruktorIstKorrekt()
+        {
+            //arrage
+            int anzahlSeiten = 6;
+            int letztesErgebnis = 0;
+
+            //act
+            Wuerfel w = new Wuerfel();
+
+            //Assert
+            Assert.IsTrue(w.AnzahlSeiten == anzahlSeiten && w.LetztesErgebnis == letztesErgebnis);
+           
+        }
     }
 }

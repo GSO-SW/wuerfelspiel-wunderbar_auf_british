@@ -5,7 +5,8 @@ namespace Wuerfelspiel
     public class Wuerfel
     {
         int anzahlSeiten;
-        private int ergebnis;
+        int ergebnis;
+        int letztesErgebnis;
         Random rnd = new Random();
         public Wuerfel(int anzahlSeiten)
         {
@@ -18,11 +19,16 @@ namespace Wuerfelspiel
                 this.anzahlSeiten = anzahlSeiten;
             }
         }
-
+        public Wuerfel()
+        {
+            this.anzahlSeiten = 6;
+            this.letztesErgebnis = 0;
+        }
 
 
         public int AnzahlSeiten { get => anzahlSeiten; }
         public int Ergebnis { get => ergebnis;}
+        public int LetztesErgebnis { get => letztesErgebnis; }
 
         public void Wuerfeln()
         {
